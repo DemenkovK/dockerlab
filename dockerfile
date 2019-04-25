@@ -1,4 +1,4 @@
-FROM dockerhub/ubuntu:16.04
+FROM ubuntu:16.04
 MAINTAINER Konstantin Demenkov <demenkovk@gmail.com
 RUN apt-get update
 RUN apt-get install -y git maven tomcat8 wget
