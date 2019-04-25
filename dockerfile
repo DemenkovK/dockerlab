@@ -1,5 +1,5 @@
 FROM dockerhub/ubuntu:16.04
-MAINTEINER Konstantin Demenkov <demenkovk@gmail.com
+MAINTAINER Konstantin Demenkov <demenkovk@gmail.com
 RUN apt-get update
 RUN apt-get install -y git maven tomcat8 wget
 ADD jre-8u211-linux-x64.tar.gz /usr/lib/jvm/
