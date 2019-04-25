@@ -3,7 +3,7 @@ MAINTAINER Konstantin Demenkov <demenkovk@gmail.com
 RUN apt-get update
 RUN apt-get install -y git maven tomcat8 wget
 ADD jre-8u211-linux-x64.tar.gz /usr/lib/jvm/
-RUN export JAVA_HOME=/usr/lib/jvm/jre1.8.0_211/ && mkdir hello-1.0 && cd hello-1.0 && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git && mvn package && cp target/hello-1.0.war
+RUN export JAVA_HOME=/usr/lib/jvm/jre1.8.0_211/ && mkdir hello && cd hello && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git . && mvn package && cp target/hello-1.0.war
 EXPOSE 8080
 
 
