@@ -9,6 +9,5 @@ ENV JAVA_HOME /usr/lib/jvm/jdk1.8.0_212
 RUN mvn -v
 RUN mkdir hello && cd hello && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git . && \
 mvn package && cp /hello/target/hello-1.0.war /var/lib/tomcat8/webapps/
-RUN service tomcat8 start
 RUN apt remove maven wget -y && rm -rf /usr/lib/jvm/jdk-8u212-linux-x64.tar.gz
 EXPOSE 8080
